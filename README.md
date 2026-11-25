@@ -1,31 +1,15 @@
-# OnePlus 13T Camera Fix for OxygenOS
+# OnePlus 13T Camera Fix for OxygenOS 17.0.0.201
 
-A module to fix camera functionality and correct battery capacity for the OnePlus 13T after converting to OxygenOS.
+My fork of [kinginu's OnePlus 13T Camera Fix](https://github.com/kinginu/oneplus13t-fix-camera), updated for the Chinese OnePlus 13T (PKX110) after converting it to OnePlus 13s OxygenOS `CPH2723_17.0.0.201`.
 
-<a href="https://www.buymeacoffee.com/kinginu" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 220px !important;" ></a>
+The module mounts selected ODM files from ColorOS over their OxygenOS counterparts at boot. This update refreshes 35 camera files from `PKX110_17.0.1.201(CN01) F.18`. I installed the module through Magisk and confirmed the camera works on my phone running `CPH2723_17.0.0.201`.
 
-## What This Module Does
-This module resolves camera and battery capacity issues on a OnePlus 13T running OxygenOS. It works by replacing the odm.img from the flashed OxygenOS firmware with the odm.img from the original ColorOS firmware. This will corrects the hardware mismatches that cause the camera and battery reporting problems.
+## Installation
 
-## Help Us Improve
-Some users have reported that this module works perfectly, while others are experiencing issues.  
-To help us identify what causes the module to fail on certain setups, **please submit a report** whether it works for you or not.
+1. Download `oneplus13t-fix-camera-CPH2723_17.0.0.201.zip` from the [releases page](https://github.com/Mainz0412/oneplus13t-fix-camera/releases).
+2. In Magisk, open **Modules**, choose **Install from storage**, select the ZIP, and reboot.
 
-[Submit a Compatibility Report](https://github.com/kinginu/oneplus13t-fix-camera/issues/new?template=report-template.yml)
-
-The more reports we receive, the easier it will be to improve this fix for everyone.  
-**Thank you for contributing!**
-
-## What Works
-After applying this fix, the following functionality should be restored or corrected:
-
-- Correct battery capacity reporting in system settings.
-- Main Camera (Photo & Video)
-- Front Camera (Photo & Video)
-
-## What Doesn't Work
-At present, no major functions are known to be broken by this fix.
-Please report any discovered issues.
+The ZIP keeps the original module ID, so Magisk installs it in place of the existing camera fix. If you run into problems, disable the module in Magisk and reboot.
 
 ## Known Issue: Photos Turn Black After Capture (KernelSU / APatch)
 If a captured photo looks fine for about a second and then fades to pure black — while **Pro mode, video recording, and third-party camera apps work normally** — your root manager is hiding this module's files from the camera app.
@@ -39,8 +23,7 @@ KernelSU and APatch unmount module files for apps that are not granted root (the
 4. Restart the camera app (or reboot).
 
 If the gallery shows the same behavior, repeat the steps for the Photos/Gallery app.
-Granting root to the camera app also works, but disabling "Umount modules" alone is the safer option.
 
-## Important Notes
-- Prerequisites: You will likely need an unlocked bootloader and root access (e.g., Magisk, KernelSU) to apply this fix.
-- Signal/Network Issues: To fix any cellular network problems after conversion, you will need the "Fix Signal Oneplus 13T" patch available at this XDA Forums thread: https://xdaforums.com/t/rom-pkx110-oxygenos-convert-oneplus-13t-to-13s.4743853/
+## Credits
+
+Thanks to [kinginu](https://github.com/kinginu) for the original module and the ODM update method. This build was shared for the users following [upstream issue #35](https://github.com/kinginu/oneplus13t-fix-camera/issues/35).

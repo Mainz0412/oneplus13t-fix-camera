@@ -1,3 +1,8 @@
+## CPH2723_17.0.0.201-local
+
+* Updated 35 camera ODM files from ColorOS `PKX110_17.0.1.201(CN01) F.18` for OxygenOS `CPH2723_17.0.0.201`.
+* Confirmed camera operation after installing the module in Magisk on one converted OnePlus 13T.
+
 ## CPH2723_17.0.0.101 (2026-10-29)
 
 * Update ODM blobs from COS: PKX110_17.0.0.104
